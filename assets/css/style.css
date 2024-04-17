@@ -11,18 +11,28 @@ body {
 
 header {
     background-color: #06131F;
-    padding: .8rem 2rem;
+    padding: .8rem 0;
 
     & img {
         height: 100%;
     }
 }
 
+/* utitlities ----------------------------------------------------------------> */
+
 .container {
     max-width: 1024px;
     width: 80%;
     margin: auto;
 }
+
+.container-lg {
+    max-width: 1440px;
+    width: 90%;
+    margin: auto;
+}
+
+/* main style ----------------------------------------------------------------> */
 
 .records {
     display: flex;
@@ -108,7 +118,6 @@ header {
 .modal-leave-to {
     opacity: 0;
 }
-
 
 /* media queries ----------------------------------------------------------------> */
 

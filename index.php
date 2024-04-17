@@ -13,7 +13,9 @@
 <body>
     <div id="app">
         <header>
-            <img width="40" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="">
+            <div class="container-lg">
+                <img width="40" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="">
+            </div>
         </header>
         <main>
             <!-- records -->
