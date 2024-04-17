@@ -3,7 +3,15 @@ createApp({
     data() {
         return {
             records: [],
-            base_api_url: 'dischi.json'
+            base_api_url: 'dischi.json',
+            isRecordModal: false,
+            currentRecord: []
+        }
+    },
+    methods: {
+        openRecordModal(index) {
+            this.isRecordModal = true;
+            this.currentRecord = this.records[index];
         }
     },
     mounted() {

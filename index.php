@@ -14,16 +14,31 @@
     <div id="app">
         <header></header>
         <main>
+            <!-- records -->
             <div class="records container">
                 <!-- card -->
-                <div v-for="record in records" class="card">
+                <div @click="openRecordModal(index)" v-for="(record, index) in records" class="card" :key="record.title">
                     <div class="top">
-                        <img width="200px" :src="record.poster" alt="album cover">
+                        <img :src="record.poster" alt="album cover">
                     </div>
                     <div class="bottom">
                         <h3>{{record.title}}</h3>
                         <h6>{{record.author}}</h6>
                         <h4>{{record.year}}</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- info modal -->
+            <div v-if="isRecordModal" class="record_modal">
+                <!-- card -->
+                <div class="modal_card">
+                    <div class="top">
+                        <img :src="currentRecord.poster" alt="album cover">
+                    </div>
+                    <div class="bottom">
+                        <h2>{{currentRecord.title}}</h2>
+                        <h5>{{currentRecord.author}}</h5>
+                        <h3>{{currentRecord.year}}</h3>
                     </div>
                 </div>
             </div>
