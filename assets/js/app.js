@@ -3,7 +3,7 @@ createApp({
     data() {
         return {
             records: [],
-            base_api_url: 'dischi.json',
+            base_api_url: 'script.php',
             isRecordModal: false,
             currentRecord: []
         }
