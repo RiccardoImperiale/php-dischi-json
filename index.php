@@ -29,9 +29,9 @@
                 </div>
             </div>
             <!-- info modal -->
-            <div v-if="isRecordModal" class="record_modal">
+            <div v-if="isRecordModal" class="record_modal" @click="isRecordModal = false">
                 <!-- card -->
-                <div class="modal_card">
+                <div class="modal_card" @click.stop="">
                     <div class="top">
                         <img :src="currentRecord.poster" alt="album cover">
                     </div>

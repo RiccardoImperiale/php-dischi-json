@@ -65,15 +65,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-
 
 .modal_card {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    cursor: default;
 
     & img {
         max-width: 600px;
@@ -94,23 +94,14 @@ header {
 }
 
 
-
 @media screen and (max-width: 1440px) {
-    .records {
-
-        .card {
-            width: calc((100% / 2) - 3rem);
-
-        }
+    .records .card {
+        width: calc((100% / 2) - 3rem);
     }
 }
 
 @media screen and (max-width: 768px) {
-    .records {
-
-        .card {
-            width: calc(100% - 3rem);
-
-        }
+    .records .card {
+        width: calc(100% - 3rem);
     }
 }
