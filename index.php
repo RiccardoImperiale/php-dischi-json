@@ -12,7 +12,22 @@
 
 <body>
     <div id="app">
-        {{message}}
+        <header></header>
+        <main>
+            <div class="records container">
+                <!-- card -->
+                <div v-for="record in records" class="card">
+                    <div class="top">
+                        <img width="200px" :src="record.poster" alt="album cover">
+                    </div>
+                    <div class="bottom">
+                        <h3>{{record.title}}</h3>
+                        <h6>{{record.author}}</h6>
+                        <h4>{{record.year}}</h4>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
     <!-- axios cdn -->

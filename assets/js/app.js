@@ -2,10 +2,18 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'ciao'
+            records: [],
+            base_api_url: 'dischi.json'
         }
     },
     mounted() {
-        console.log('hi!!');
+        axios.get(this.base_api_url)
+            .then((result) => {
+                console.log(result);
+                this.records = result.data;
+            }).catch((err) => {
+                console.log(err.message);
+                this.error = err.message
+            });
     },
 }).mount('#app')

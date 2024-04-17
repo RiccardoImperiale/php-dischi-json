@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D2D3C;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #06131F;
+    height: 60px;
+}
+
+.container {
+    max-width: 1024px;
+    width: 80%;
+    margin: auto;
+}
+
+.records {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
+
+    .card {
+        padding: 2rem;
+        background-color: #112030;
+        border-radius: .5rem;
+        width: calc((100% / 3) - 3rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .bottom {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+
+            & h6 {
+                padding: .5rem 0;
+                font-size: .8rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
