@@ -11,7 +11,11 @@ body {
 
 header {
     background-color: #06131F;
-    height: 60px;
+    padding: .8rem 2rem;
+
+    & img {
+        height: 100%;
+    }
 }
 
 .container {
@@ -59,7 +63,7 @@ header {
 .record_modal {
     position: fixed;
     inset: 0;
-    background-color: #112030db;
+    background-color: #0b1520db;
     margin: 1rem;
     border-radius: .5rem;
     display: flex;
@@ -76,8 +80,8 @@ header {
     cursor: default;
 
     & img {
-        max-width: 600px;
-        width: 100%;
+        width: 500px;
+        max-width: 100%;
     }
 
     .bottom {
@@ -93,6 +97,20 @@ header {
     }
 }
 
+/* transitions ----------------------------------------------------------------> */
+
+.modal-enter-active,
+.modal-leave-active {
+    transition: opacity 0.25s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+    opacity: 0;
+}
+
+
+/* media queries ----------------------------------------------------------------> */
 
 @media screen and (max-width: 1440px) {
     .records .card {

@@ -12,7 +12,9 @@
 
 <body>
     <div id="app">
-        <header></header>
+        <header>
+            <img width="40" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="">
+        </header>
         <main>
             <!-- records -->
             <div class="records container">
@@ -29,19 +31,22 @@
                 </div>
             </div>
             <!-- info modal -->
-            <div v-if="isRecordModal" class="record_modal" @click="isRecordModal = false">
-                <!-- card -->
-                <div class="modal_card" @click.stop="">
-                    <div class="top">
-                        <img :src="currentRecord.poster" alt="album cover">
-                    </div>
-                    <div class="bottom">
-                        <h2>{{currentRecord.title}}</h2>
-                        <h5>{{currentRecord.author}}</h5>
-                        <h3>{{currentRecord.year}}</h3>
+            <transition name="modal">
+                <div v-if="isRecordModal" class="record_modal" @click="isRecordModal = false">
+                    <!-- card -->
+                    <div class="modal_card" @click.stop="">
+                        <div class="top">
+                            <img :src="currentRecord.poster" alt="album cover">
+                        </div>
+                        <div class="bottom">
+                            <h2>{{currentRecord.title}}</h2>
+                            <h5>{{currentRecord.author}}</h5>
+                            <h3>{{currentRecord.year}}</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </transition>
+
         </main>
     </div>
 
